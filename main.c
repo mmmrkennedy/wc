@@ -32,7 +32,7 @@ int main() {
             if(currString[i] == '\n'){
                 newLines++;
             }
-            if(prevCharDelim == 0 && (currString[i] == ' ' || currString[i] == '.' || currString[i] == ':' || currString[i] == ';')){
+            if(prevCharDelim == 0 && (currString[i] == ' ' || currString[i] == '.' || currString[i] == ':' || currString[i] == ';' || currString[i] == '\t')){
                 words++;
             }
         }
