@@ -19,8 +19,6 @@ int main() {
             break;
         }
 
-        words++;
-
         for(int i = 0; i < strlen(currString); i++){
 
             if(i != 0 && (currString[i-1] == ' ' || currString[i-1] == '.' || currString[i-1] == ':' || currString[i-1] == ';')){
@@ -31,6 +29,7 @@ int main() {
 
             if(currString[i] == '\n'){
                 newLines++;
+                words++;
             }
             if(prevCharDelim == 0 && (currString[i] == ' ' || currString[i] == '.' || currString[i] == ':' || currString[i] == ';' || currString[i] == '\t')){
                 words++;
@@ -40,7 +39,7 @@ int main() {
         chars += (strlen(currString)-1);
     }
 
-    printf("%d\t%d\t%llu",newLines,words,chars);
+    printf("%d\t%d\t%llu\n",newLines,words,chars);
 
     return 0;
 }
